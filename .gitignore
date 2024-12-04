@@ -1,0 +1,8 @@
+/node_modules
+/vendor
+/.osp
+/.idea
+/.vscode
+package-lock.json
+composer.lock
+/temp
