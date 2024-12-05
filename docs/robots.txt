@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://push.co.ua/sitemap.xml
