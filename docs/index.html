@@ -98,11 +98,11 @@
     <main>
         <div class="flex sm:flex-col sm:justify-center lg:justify-between mx-auto max-w-screen-xl px-4 md:px-8">
             <div class="passgen__block">
-                <h2 id="jspass"></h2>
-                <button class="passgen__copybtn" onclick="copyContent()">Скопіювати</button>
+                <h2 id="jspass"> </h2>
+                <button class="passgen__copybtn" onclick="copyContent()" id="copypass">Скопіювати</button>
             </div>
             <div class="passgen__block">
-                <button class="passgen__reloadbtn" onClick="window.location.reload();">Новий</button>
+                <button type="button" class="passgen__reloadbtn" id="newpass">Новий</button>
             </div>
         </div>
     </main>
@@ -113,7 +113,10 @@
             </div>
         </div>
         <script>
-            document.getElementById("jspass").innerHTML = generatePassword();
+            document.getElementById('newpass').addEventListener('click', function() {
+                document.getElementById("jspass").innerHTML = generatePassword();
+            })
+
             function generatePassword() {
                 var length = 8,
                     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
@@ -121,19 +124,21 @@
                 for (var i = 0, n = charset.length; i < length; ++i) {
                     retVal += charset.charAt(Math.floor(Math.random() * n));
                 }
+                console.log(retVal);
                 return retVal;
             }
-        </script>
-        <script>
-            let text = document.getElementById('jspass').innerHTML;
+            document.getElementById("jspass").innerHTML = generatePassword();
+
             const copyContent = async () => {
                 try {
+                    let text = document.getElementById('jspass').innerHTML;
                     await navigator.clipboard.writeText(text);
-                    console.log('Content copied to clipboard');
+                    console.log('Скопійовано:', text);
                 } catch (err) {
-                console.error('Failed to copy: ', err);
+                console.error('Помилка: ', err);
                 }
             }
+
         </script>
     </footer>
 </body>
