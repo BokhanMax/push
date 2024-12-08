@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply flex flex-col h-screen justify-between;
+    }
+
+    h1 {
+        @apply mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl;
+    }
+
+    h2 {
+        @apply text-4xl font-extrabold tracking-wide mb-4;
+    }
+
+    .passgen__copybtn {
+        @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700;
+    }
+
+    .passgen__reloadbtn {
+        @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-16 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
+    }
+
+    .passgen__block {
+        @apply m-4 flex items-center sm:justify-center gap-4 sm:flex-col lg:flex-row;
+    }
+
+    main {
+        @apply m-4 mb-auto
+    }
+
+    footer {
+        @apply text-gray-600;
+    }
+
+    .passgen__main__wrapper {
+        @apply flex sm:flex-col sm:justify-center lg:justify-between mx-auto max-w-screen-xl sm:py-4 py-24 px-4 md:px-8;
+    }
+
+    .passgen__header__subhead {
+        @apply mx-auto max-w-screen-md text-center text-gray-500 md:text-lg;
+    }
+}
