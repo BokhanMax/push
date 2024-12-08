@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="🔑 Наш онлайн-генератор паролів дозволить сгенерувати випадковий пароль з 8 символів — великі + маленькі літери та цифри">
+    <link rel="stylesheet" href="/assets/style.css">
     <link rel="icon" href="/favicons/favicon.ico">
     <link rel="shortcut icon" href="/favicons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
@@ -26,45 +27,6 @@
     <meta property="og:url" content="https://push.co.ua">
     <meta property="og:site_name" content="PassGen">
     <meta property="og:locale" content="uk">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                screens: {
-                    'sm': '280px',
-                    'md': '768px',
-                    'lg': '1024px',
-                    'xl': '1280px',
-                    '2xl': '1536px',
-                    'fxl': '1920px',
-                },
-            },
-        }
-    </script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            h2 {
-                @apply text-4xl font-extrabold tracking-wide mb-4;
-            }
-
-            .passgen__copybtn {
-                @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700;
-            }
-
-            .passgen__reloadbtn {
-                @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-16 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
-            }
-
-            .passgen__block {
-                @apply m-4 flex items-center sm:justify-center gap-4 sm:flex-col lg:flex-row;
-            }
-
-            main {
-                @apply m-4 mb-auto
-            }
-        }
-    </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RE3KM392Y"></script>
     <script>
@@ -83,7 +45,7 @@
         }
     </script>
 </head>
-<body class="flex flex-col h-screen justify-between">
+<body>
     <div itemscope itemtype="https://schema.org/WebSite">
         <link itemprop="url" href="https://push.co.ua">
             <meta itemprop="name" content="PassGen">
@@ -93,14 +55,14 @@
         <div class="bg-white py-6 sm:py-4 lg:py-12">
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <div class="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
-                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Згенеруйте надійний пароль</h2>
-                    <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Наш онлайн-генератор паролів дозволить сгенерувати випадковий пароль з 8 символів — великі + маленькі літери та цифри</p>
+                    <h1>Згенеруйте надійний пароль</h1>
+                    <p class="passgen__header__subhead">Наш онлайн-генератор паролів дозволить сгенерувати випадковий пароль з 8 символів — великі + маленькі літери та цифри</p>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="flex sm:flex-col sm:justify-center lg:justify-between mx-auto max-w-screen-xl sm:py-4 py-24 px-4 md:px-8">
+        <div class="passgen__main__wrapper">
             <div class="passgen__block">
                 <h2 id="jspass"> </h2>
                 <button class="passgen__copybtn" onclick="copyContent()" id="copypass">Скопіювати</button>
@@ -110,7 +72,7 @@
             </div>
         </div>
     </main>
-    <footer class="text-gray-600 body-font">
+    <footer>
         <div class="container px-5 py-8 2xl:py-24 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                 <img src="/img/PassGenLogo.png" alt="PassGen - згенерувати пароль онлайн" class="w-10 h-10">
@@ -127,34 +89,7 @@
                 </a>
             </span>
         </div>
-        <script>
-            document.getElementById('newpass').addEventListener('click', function() {
-                document.getElementById("jspass").innerHTML = generatePassword();
-            })
-
-            function generatePassword() {
-                var length = 8,
-                    charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-                    retVal = "";
-                for (var i = 0, n = charset.length; i < length; ++i) {
-                    retVal += charset.charAt(Math.floor(Math.random() * n));
-                }
-                console.log(retVal);
-                return retVal;
-            }
-            document.getElementById("jspass").innerHTML = generatePassword();
-
-            const copyContent = async () => {
-                try {
-                    let text = document.getElementById('jspass').innerHTML;
-                    await navigator.clipboard.writeText(text);
-                    console.log('Скопійовано:', text);
-                } catch (err) {
-                console.error('Помилка: ', err);
-                }
-            }
-
-        </script>
+        <script src="/assets/scripts.js"></script>
     </footer>
 </body>
 </html>
