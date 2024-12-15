@@ -1,4 +1,4 @@
-document.getElementById('newpass').addEventListener('click', function() {
+document.getElementById('newpassbutton').addEventListener('click', function() {
     document.getElementById("jspass").innerHTML = generatePassword();
 })
 
