@@ -3,87 +3,87 @@
 @tailwind utilities;
 
 @layer components {
-    body {
-        @apply flex flex-col h-screen justify-between;
-    }
+	body {
+		@apply flex h-screen flex-col justify-between;
+	}
 
-    h1 {
-        @apply mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl;
-    }
+	main {
+		@apply m-4 mb-auto;
+	}
 
-    h2 {
-        @apply text-4xl font-extrabold tracking-wide mb-4;
-    }
+	footer {
+		@apply text-gray-600;
+	}
 
-    #copypassbutton {
-        @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700;
-    }
+	h1 {
+		@apply mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl;
+	}
 
-    #newpassbutton {
-        @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg sm:rounded-full text-sm px-16 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
-    }
+	h2 {
+		@apply mb-4 text-4xl font-extrabold tracking-wide;
+	}
 
-    .passgen__main__upperblock {
-        @apply m-4 flex items-center sm:justify-center gap-4 sm:flex-col lg:flex-row sm:mt-16;
-    }
+	#copypassbutton {
+		@apply mb-2 me-2 rounded-lg border border-gray-300 bg-white px-5 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700;
+	}
 
-    .passgen__main__downblock {
-        @apply m-4 flex items-center sm:justify-center gap-4 sm:flex-col lg:flex-row mt-24 sm:mt-16;
-    }
+	#newpassbutton {
+		@apply mb-2 me-2 rounded-lg bg-blue-700 px-16 py-3 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:rounded-full dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+	}
 
-    main {
-        @apply m-4 mb-auto
-    }
+	.passgen__main__upperblock {
+		@apply m-4 flex items-center gap-4 sm:mt-16 sm:flex-col sm:justify-center lg:flex-row;
+	}
 
-    footer {
-        @apply text-gray-600;
-    }
+	.passgen__main__downblock {
+		@apply m-4 mt-24 flex items-center gap-4 sm:mt-16 sm:flex-col sm:justify-center lg:flex-row;
+	}
 
-    .passgen__main__wrapper {
-        @apply flex sm:flex-col sm:justify-center lg:justify-between mx-auto max-w-screen-xl sm:py-4 py-24 px-4 md:px-8;
-    }
+	.passgen__main__wrapper {
+		@apply mx-auto flex max-w-screen-xl px-4 py-24 sm:flex-col sm:justify-center sm:py-4 md:px-8 lg:justify-between;
+	}
 
-    .passgen__header__subhead {
-        @apply mx-auto max-w-screen-md text-center text-gray-500 md:text-lg;
-    }
+	.passgen__header__subhead {
+		@apply mx-auto max-w-screen-md text-center text-gray-500 md:text-lg;
+	}
 
-    .passgen__header__wrapper {
-        @apply bg-white py-6 sm:py-4 lg:py-12;
-    }
+	.passgen__header__wrapper {
+		@apply bg-white py-6 sm:py-4 lg:py-12;
+	}
 
-    .passgen__header__block {
-        @apply mx-auto max-w-screen-2xl px-4 md:px-8;
-    }
+	.passgen__header__block {
+		@apply mx-auto max-w-screen-2xl px-4 md:px-8;
+	}
 
-    .passgen__header__heading {
-        @apply rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12;
-    }
+	.passgen__header__heading {
+		@apply rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12;
+	}
 
-    .passgen__footer__wrapper {
-        @apply container px-5 py-8 2xl:py-24 mx-auto flex items-center sm:flex-row flex-col;
-    }
+	.passgen__footer__wrapper {
+		@apply container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row 2xl:py-24;
+	}
 
-    .passgen__footer__logoblock {
-        @apply flex font-medium items-center md:justify-start justify-center text-gray-900;
-    }
+	.passgen__footer__logoblock {
+		@apply flex items-center justify-center font-medium text-gray-900 md:justify-start;
+	}
 
-    .passgen__footer__logoblock__text {
-        @apply ml-3 text-xl sm:hidden;
-    }
+	.passgen__footer__logoblock__text {
+		@apply ml-3 text-xl sm:hidden;
+	}
 
-    .passgen__footer__copyright {
-        @apply text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4;
-    }
+	.passgen__footer__copyright {
+		@apply mt-4 text-sm text-gray-500 sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4;
+	}
 
-    .passgen__footer__copyright__a {
-        @apply text-gray-600 ml-1;
-    }
+	.passgen__footer__copyright__a {
+		@apply ml-1 text-gray-600;
+	}
 
-    .passgen__footer__iconsblock {
-        @apply inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start;
-    }
+	.passgen__footer__iconsblock {
+		@apply mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start;
+	}
 
-    .passgen__footer__iconsblock__icon {
-        @apply ml-3 text-gray-500;
-    }
+	.passgen__footer__iconsblock__icon {
+		@apply ml-3 text-gray-500;
+	}
 }

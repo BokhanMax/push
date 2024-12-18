@@ -4,6 +4,8 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./docs/assets/style.css --minify"
   },
   "devDependencies": {
+    "prettier": "3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.16"
   }
 }
