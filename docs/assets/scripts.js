@@ -2,12 +2,11 @@ document.getElementById('newpassbutton').addEventListener('click', function() {
     document.getElementById("jspass").innerHTML = generatePassword();
 })
 
-
 function generatePassword() {
-	const passwordLength = document.getElementById('passwordLength');
-    var length = passwordLength,
-        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~|}{[]\:;?></-=",
-        retVal = "";
+	var passwordLength = document.getElementById('passwordLength');
+    var length = passwordLength;
+	var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~|}{[]\:;?></-=";
+	var retVal = "";
     for (var i = 0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));
     }
