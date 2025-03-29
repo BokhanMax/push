@@ -57,6 +57,7 @@ html(lang='uk')
 					button#copypassbutton(onclick='copyContent()' aria-label='Скопіювати пароль') Скопіювати
 				.passgen__main__downblock
 					button#newpassbutton(type='button' aria-label='Згенерувати новий пароль') Новий пароль
+					input(type="number", value="12", min="4", max="128")#passwordLength.mt-1.p-2.border.rounded.w-full
 		footer
 			.passgen__footer__wrapper
 				a.passgen__footer__logoblock(href='/')
