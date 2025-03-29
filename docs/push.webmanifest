@@ -1,6 +1,6 @@
 {
-    "name":"PassGen",
-    "short_name":"PassGen",
+    "name":"PuSH",
+    "short_name":"PuSH",
     "description": "Згенерувати надійний пароль",
     "icons":[
         {
