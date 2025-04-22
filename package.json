@@ -1,8 +1,7 @@
 {
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./docs/assets/style.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./docs/assets/style.css --minify",
-    "pug": "pug -P ./src/index.pug --out ./docs/"
+    "build": "npx tailwindcss -i ./src/input.css -o ./docs/assets/style.css --minify"
   },
   "devDependencies": {
     "prettier": "3.4.2",
