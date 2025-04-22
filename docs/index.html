@@ -475,7 +475,15 @@
 		});
 
 		// Initial language setup (default to Ukrainian)
-		updateLanguage('uk');
+		if (navigator.language == "en") {
+			updateLanguage('en');
+		} else if (navigator.language == "de") {
+			updateLanguage('de');
+		} else if (navigator.language == "es") {
+			updateLanguage('es');
+		} else {
+			updateLanguage('uk');
+		};
     </script>
 </body>
 </html>
