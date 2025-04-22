@@ -475,11 +475,11 @@
 		});
 
 		// Initial language setup (default to Ukrainian)
-		if (navigator.language == "en") {
+		if (navigator.language || navigator.userLanguage == "en") {
 			updateLanguage('en');
-		} else if (navigator.language == "de") {
+		} else if (navigator.language || navigator.userLanguage == "de") {
 			updateLanguage('de');
-		} else if (navigator.language == "es") {
+		} else if (navigator.language || navigator.userLanguage == "es") {
 			updateLanguage('es');
 		} else {
 			updateLanguage('uk');
